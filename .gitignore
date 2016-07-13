@@ -1,0 +1,7 @@
+.DS_Store
+node_modules
+reports
+logs
+npm-debug.log
+lcov.info
+*.log
