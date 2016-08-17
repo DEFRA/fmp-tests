@@ -4,7 +4,7 @@ module.exports = {
   },
   elements: {
     'main': '#content',
-    'header': 'h2'
+    'header': 'h1'
   },
   commands: [{
     load: function () {
