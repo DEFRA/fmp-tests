@@ -5,8 +5,17 @@ module.exports = {
   elements: {
     'main': '#content',
     'header': 'h1',
-    'placeText': '#place',
-    'submitBtn': '#home-page form button[type=submit]'
+    'headersubtext': '#home-page p',
+    'descheader': '#home-page h2.heading-medium',
+    'descsubheader': '#home-page:nth-child(3)',
+    'desc1': '#home-page ol.list.list-number li:nth-child(1)',
+    'desc2': '#home-page ol.list.list-number li:nth-child(2)',
+    'desc3': '#home-page ol.list.list-number li:nth-child(3)',
+    'searchtext': '#home-page h3.heading-medium',
+    'placeText': '#place.form-control',
+    'submitBtn': '#home-page form button[type=submit]',
+    'homelinktext': '#home-page p:last-child',
+    'homelink': 'a[href="https://flood-warning-information.service.gov.uk/"'
   },
   commands: [{
     load: function () {

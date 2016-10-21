@@ -23,6 +23,8 @@ module.exports = {
       var ConfirmLocationPage = client.page.confirmlocation()
 
       // Submit the search
+      ConfirmLocationTests.url(ConfirmLocationPage, location)
+      ConfirmLocationTests.confirm(ConfirmLocationPage)
       ConfirmLocationPage.submit()
 
       /**
