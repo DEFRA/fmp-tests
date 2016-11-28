@@ -9,7 +9,7 @@ module.exports = {
     'moreinfo': 'a[href="http://planningguidance.communities.gov.uk/blog/guidance/flood-risk-and-coastal-change/flood-zone-and-flood-risk-tables/table-1-flood-zones"]',
     'floodriskassessment': 'a[href="https://www.gov.uk/guidance/flood-risk-assessment-for-planning-applications"]',
     'mapcontainer': '#summary-page #map.map',
-    'zoomin': '#summary-page #map.map button.ol-zoom-in',
+    'zoomin': '#summary-page #map > div > div.ol-overlaycontainer-stopevent > div.ol-zoom.ol-unselectable.ol-control > button.ol-zoom-in',
     'zoomout': '#summary-page #map.map button.ol-zoom-out',
     'fullscreen': '#summary-page div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control button.ol-full-screen-false',
     'scale': '#summary-page #map.map div.ol-scale-line.ol-unselectable',

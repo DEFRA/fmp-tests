@@ -14,7 +14,7 @@ module.exports = {
     'searchtext': '#home-page h3.heading-medium',
     'placeText': '#place.form-control',
     'submitBtn': '#home-page form button[type=submit]',
-    'homelinktext': '#home-page p:last-child',
+    'homelinktext': '#home-page > div:nth-child(5) > div > p',
     'homelink': 'a[href="https://flood-warning-information.service.gov.uk/"'
   },
   commands: [{
@@ -22,15 +22,14 @@ module.exports = {
       return this.navigate()
     },
     setLocation: function (value) {
-        return this.setValue('@placeText', value)
+      return this.setValue('@placeText', value)
     },
     submit: function () {
-        return this.waitForElementVisible('@submitBtn', 1000)
-        .click('@submitBtn')
+      return this.waitForElementVisible('@submitBtn', 1000)
+      .click('@submitBtn')
     },
     setPostcodeAndSubmit: function (location) {
       return this.setLocation(location).submit()
     }
-    }
-  ]
+  }]
 }
