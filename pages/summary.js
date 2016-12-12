@@ -9,7 +9,7 @@ module.exports = {
     'moreinfo': 'a[href="http://planningguidance.communities.gov.uk/blog/guidance/flood-risk-and-coastal-change/flood-zone-and-flood-risk-tables/table-1-flood-zones"]',
     'floodriskassessment': 'a[href="https://www.gov.uk/guidance/flood-risk-assessment-for-planning-applications"]',
     'mapcontainer': '#summary-page #map.map',
-    'zoomin': '#summary-page #map > div > div.ol-overlaycontainer-stopevent > div.ol-zoom.ol-unselectable.ol-control > button.ol-zoom-in',
+    'zoomin': '#summary-page #map.map button.ol-zoom-in',
     'zoomout': '#summary-page #map.map button.ol-zoom-out',
     'fullscreen': '#summary-page div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control button.ol-full-screen-false',
     'scale': '#summary-page #map.map div.ol-scale-line.ol-unselectable',
@@ -26,7 +26,7 @@ module.exports = {
     'otherlocation': 'a[href="/"]',
 
     // Zone 1 specific elements
-    'zone1titlesubtext': '#summary-page p',
+    'zone1titlesubtext': '#summary-page > div:nth-child(4) > p',
     'zone1header': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone h2.heading-large',
     'zone1text1': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone p',
     'zone1moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone a',
@@ -41,7 +41,7 @@ module.exports = {
     'zone1text8': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Zone 2 specific elements
-    'zone2titlesubtext': '#summary-page p',
+    'zone2titlesubtext': '#summary-page > div:nth-child(4) > p',
     'zone2header': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone h2.heading-large',
     'zone2text1': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone p',
     'zone2moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone a',
@@ -51,7 +51,7 @@ module.exports = {
     'zone2text4': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Zone 3 specific elements
-    'zone3titlesubtext': '#summary-page p',
+    'zone3titlesubtext': '#summary-page > div:nth-child(4) > p',
     'zone3header': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone h2.heading-large',
     'zone3text1': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone p',
     'zone3moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone a',
@@ -61,7 +61,7 @@ module.exports = {
     'zone3text4': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Areas benefitting specific elements
-    'areasbenefittingtitlesubtext': '#summary-page p',
+    'areasbenefittingtitlesubtext': '#summary-page > div:nth-child(4) > p',
     'areasbenefittingheader1': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone h2.heading-large',
     'areasbenefittingheader2': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone h3.heading-medium',
     'areasbenefittingtext1': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone p',
