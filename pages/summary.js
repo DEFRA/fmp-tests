@@ -3,7 +3,7 @@ module.exports = {
     return this.api.launchUrl + '/summary'
   },
   elements: {
-    'main': '#content',
+    'main': '#summary-page',
     'title': '#proposition-name',
     'header': '#summary-page > h1',
     'moreinfo': 'a[href="http://planningguidance.communities.gov.uk/blog/guidance/flood-risk-and-coastal-change/flood-zone-and-flood-risk-tables/table-1-flood-zones"]',
@@ -11,7 +11,8 @@ module.exports = {
     'mapcontainer': '#summary-page #map.map',
     'zoomin': '#summary-page #map.map button.ol-zoom-in',
     'zoomout': '#summary-page #map.map button.ol-zoom-out',
-    'fullscreen': '#summary-page div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control button.ol-full-screen-false',
+    'enterfullscreen': '#summary-page div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control button.ol-full-screen-false',
+    'exitfullscreen': '#summary-page.fullscreen div.exit-fullscreen.toggle-fullscreen.ol-full-screen.ol-control.hidden-mobile button.ol-full-screen-true',
     'scale': '#summary-page #map.map div.ol-scale-line.ol-unselectable',
     'mapinfo': '#summary-page #map.map div.ol-attribution.ol-unselectable.ol-control.ol-collapsed button',
     'maplegend': '#summary-page #legend.controls',
@@ -26,7 +27,7 @@ module.exports = {
     'otherlocation': 'a[href="/"]',
 
     // Zone 1 specific elements
-    'zone1titlesubtext': '#summary-page > div:nth-child(4) > p',
+    'zone1titlesubtext': 'html body.js-enabled #summary-page div.nojs-hide.ie-hide p',
     'zone1header': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone h2.heading-large',
     'zone1text1': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone p',
     'zone1moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.zone a',
@@ -78,6 +79,19 @@ module.exports = {
   commands: [{
     load: function () {
       return this.navigate()
-    }
-  }]
+    },
+  enterfullscreen: function () {
+    var that = this
+    this.waitForElementVisible('@enterfullscreen', 10000, function () {
+      that.click('@enterfullscreen')
+    })
+  },
+  exitfullscreen: function () {
+    var that = this
+    this.waitForElementVisible('@exitfullscreen', 10000, function () {
+      that.click('@exitfullscreen')
+    })
+  }
+}
+]
 }

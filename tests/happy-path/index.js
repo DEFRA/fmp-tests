@@ -1,6 +1,6 @@
 var data = require('./data')
 var homeTests = require('../../assertions/home')
-var ConfirmLocationTests = require('../../assertions/confirmlocation')
+var confirmlocationTests = require('../../assertions/confirmlocation')
 var summaryTests = require('../../assertions/summary')
 
 module.exports = {
@@ -20,17 +20,37 @@ module.exports = {
       /**
       * Create confirm-location page object
       */
-      var ConfirmLocationPage = client.page.confirmlocation()
+      var confirmlocationPage = client.page.confirmlocation()
+
+      //Test confirm-location map fullscreen
+
+      confirmlocationPage.enterFullscreen()
+
+      confirmlocationTests.assertFullscreen(confirmlocationPage, true)
+
+      confirmlocationPage.exitFullscreen()
+
+      confirmlocationTests.assertFullscreen(confirmlocationPage, false)
 
       // Submit the search
-      ConfirmLocationTests.url(ConfirmLocationPage, location)
-      ConfirmLocationTests.confirm(ConfirmLocationPage)
-      ConfirmLocationPage.submit()
+      confirmlocationTests.url(confirmlocationPage, location)
+      confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.submit()
 
       /**
       * Create summary page object
       */
       var summaryPage = client.page.summary()
+
+      //Test summary map fullscreen
+
+      summaryPage.enterfullscreen()
+
+      summaryTests.assertfullscreen(summaryPage, true)
+
+      summaryPage.exitfullscreen()
+
+      summaryTests.assertfullscreen(summaryPage, false)
 
       /**
       * Confirm correct Flood Zone Info

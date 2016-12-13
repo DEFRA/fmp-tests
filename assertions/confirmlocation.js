@@ -10,11 +10,18 @@ module.exports = {
       .assert.visible('@map')
       .assert.visible('@mapzoomin')
       .assert.visible('@mapzoomout')
-      .assert.visible('@mapfullscreen')
+      .assert.visible('@mapenterfullscreen')
       .assert.visible('@mapscale')
       .assert.visible('@mapinfo')
   },
   url: function (browser, location) {
     browser.assert.urlContains(location)
+  },
+  assertFullscreen: function (confirmlocationPage, val) {
+    if (val) {
+      confirmlocationPage.assert.cssClassPresent('@main', 'fullscreen')
+    } else {
+      confirmlocationPage.assert.cssClassNotPresent('@main', 'fullscreen')
+    }
   }
 }
