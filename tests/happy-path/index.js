@@ -24,7 +24,11 @@ module.exports = {
 
       //Test confirm-location map fullscreen
 
+      client.pause(2000)  // added to counter timeout issues
+
       confirmlocationPage.enterFullscreen()
+
+      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
 
       confirmlocationTests.assertFullscreen(confirmlocationPage, true)
 
@@ -45,6 +49,8 @@ module.exports = {
       //Test summary map fullscreen
 
       summaryPage.enterfullscreen()
+
+      summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
 
       summaryTests.assertfullscreen(summaryPage, true)
 
