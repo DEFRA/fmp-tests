@@ -1,7 +1,7 @@
 module.exports = {
   confirm: function (homePage) {
     homePage
-      .assert.title('Flood map for planning')
+      .assert.title('Flood map for planning - GOV.UK')
       .assert.containsText('@header', 'Flood map for planning')
       .assert.containsText('@headersubtext', 'This service is for learning about a site location\'s flood probability as part of development planning.')
       .assert.containsText('@descheader', 'Before you start')
