@@ -1,6 +1,6 @@
 module.exports = {
   invalid: [
-    { location: '!"£$^&&*()"' },
+    { location: 'luhkhlkl' },
     { location: 'sfrenfbtgd' }
 ],
   empty: [

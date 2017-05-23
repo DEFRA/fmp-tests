@@ -15,7 +15,8 @@ module.exports = {
     'placeText': '#place.form-control',
     'submitBtn': '#home-page form button[type=submit]',
     'homelinktext': '#home-page > div:nth-child(5) > div > p',
-    'homelink': 'a[href="https://flood-warning-information.service.gov.uk/"'
+    'homelink': 'a[href="https://flood-warning-information.service.gov.uk/"',
+    'homeerror': '#home-page div.grid-row div.column-half form div.form-group div.error-message'
   },
   commands: [{
     load: function () {

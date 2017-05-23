@@ -19,6 +19,7 @@ module.exports = {
       homeTests.confirm(homePage.load())
       homePage.setPostcodeAndSubmit(location)
       homeerrorTests.assertError(homePage)
+      client.assert.urlContains(location)
 })
 
     client.end()
