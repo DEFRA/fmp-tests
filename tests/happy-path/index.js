@@ -6,9 +6,8 @@ var summaryTests = require('../../assertions/summary')
 module.exports = {
   'happy-path': function (client) {
     // Loop over each postcode
-      data.forEach (function (item) {
+    data.forEach(function (item) {
       var location = item.location
-      var floodzone = item.floodzone
 
       var homePage = client.page.home()
 
@@ -22,7 +21,7 @@ module.exports = {
       */
       var confirmlocationPage = client.page.confirmlocation()
 
-      //Test confirm-location map fullscreen
+      // Test confirm-location map fullscreen
 
       client.pause(2000)  // added to counter timeout issues
 
@@ -46,7 +45,7 @@ module.exports = {
       */
       var summaryPage = client.page.summary()
 
-      //Test summary map fullscreen
+      // Test summary map fullscreen
 
       summaryPage.enterfullscreen()
 
@@ -62,6 +61,6 @@ module.exports = {
       * Confirm correct Flood Zone Info
       */
       summaryTests.confirm(summaryPage, item)
-})
+    })
     client.end()
-}}
+  }}

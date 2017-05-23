@@ -7,5 +7,5 @@ const data = [
   { location: 'PO200HB', floodzone: 'flood zone 2' },
   { location: 'IG110HZ', floodzone: 'area that benefits from flood defences' },
   { location: 'PO200ES', floodzone: 'flood zone 3' }
-  ]
+]
 module.exports = data

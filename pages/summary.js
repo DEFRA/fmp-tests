@@ -80,18 +80,18 @@ module.exports = {
     load: function () {
       return this.navigate()
     },
-  enterfullscreen: function () {
-    var that = this
-    this.waitForElementVisible('@enterfullscreen', 10000, function () {
-      that.click('@enterfullscreen')
-    })
-  },
-  exitfullscreen: function () {
-    var that = this
-    this.waitForElementVisible('@exitfullscreen', 10000, function () {
-      that.click('@exitfullscreen')
-    })
+    enterfullscreen: function () {
+      var that = this
+      this.waitForElementVisible('@enterfullscreen', 10000, function () {
+        that.click('@enterfullscreen')
+      })
+    },
+    exitfullscreen: function () {
+      var that = this
+      this.waitForElementVisible('@exitfullscreen', 10000, function () {
+        that.click('@exitfullscreen')
+      })
+    }
   }
-}
-]
+  ]
 }

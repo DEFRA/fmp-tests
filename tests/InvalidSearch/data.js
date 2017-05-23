@@ -2,10 +2,10 @@ module.exports = {
   invalid: [
     { location: 'luhkhlkl' },
     { location: 'sfrenfbtgd' }
-],
+  ],
   empty: [
     { location: '' }
-],
+  ],
   nonenglish: [
     { location: 'EH1' },
     { location: 'Glasgow' },
@@ -13,5 +13,5 @@ module.exports = {
     { location: 'SY23 2HN' },
     { location: 'creggan' },
     { location: 'BT45' }
-]
+  ]
 }
