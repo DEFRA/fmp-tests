@@ -22,6 +22,8 @@ module.exports = {
 
     client.pause(2000)  // added to counter timeout issues
 
+    confirmlocationTests.confirm(confirmlocationPage)
+
     confirmlocationPage.enterFullscreen()
 
     confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
@@ -32,9 +34,8 @@ module.exports = {
 
     confirmlocationTests.assertFullscreen(confirmlocationPage, false)
 
-      // Submit the search
+    // Submit the search
     confirmlocationTests.url(confirmlocationPage, 'WA41HT')
-    confirmlocationTests.confirm(confirmlocationPage)
     confirmlocationPage.submit()
 
       /**
