@@ -14,8 +14,8 @@ module.exports = {
       .assert.visible('@mapscale')
       .assert.visible('@mapinfo')
   },
-  url: function (browser, location) {
-    browser.assert.urlContains(location)
+  url: function (browser, en) {
+    browser.assert.urlContains(en)
   },
   assertFullscreen: function (confirmlocationPage, val) {
     if (val) {
