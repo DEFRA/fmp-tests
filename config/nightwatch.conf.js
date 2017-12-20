@@ -4,7 +4,7 @@ var phantomjs = require('phantomjs-prebuilt')
 
 // Get the launchUrl from the argv,
 // otherwise default to localhost:3000
-var url = 'https://fmp-dev.herokuapp.com/'
+var url = 'https://fmp-qa.envage.co.uk/'
 var urlIdx = process.argv.indexOf('--url')
 
 if (urlIdx > 1) {
@@ -33,7 +33,7 @@ module.exports = {
   },
   test_settings: {
     'default': {
-      filter: '',
+      // filter: 'tests/map/index.js',
       launch_url: url,
       selenium_host: '127.0.0.1',
       selenium_port: 4444,

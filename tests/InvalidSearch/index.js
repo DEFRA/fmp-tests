@@ -28,12 +28,11 @@ module.exports = {
 // Search with empty postcode search term
 
   'emptySearch': function (client) {
-
   // Loop over each postcode
-  locations.empty.forEach (function (item) {
-    var location = item.location
+    locations.empty.forEach(function (item) {
+      var location = item.location
 
-    var homePage = client.page.home()
+      var homePage = client.page.home()
 
     // Navigate to the home page & submit postcode
 
@@ -126,33 +125,32 @@ module.exports = {
     homeTests.assertnorthingError(homePage)
   })
     client.end()
-},
+  },
 
 // Search with non-english search term
 
   'nonenglishSearch': function (client) {
-
   // Loop over each postcode
-  locations.nonenglish.forEach (function (item) {
-    var location = item.location
+    locations.nonenglish.forEach(function (item) {
+      var location = item.location
 
-    var homePage = client.page.home()
+      var homePage = client.page.home()
 
     // Navigate to the home page & submit postcode
 
-    homeTests.confirm(homePage.load())
-    homePage.setPostcodeAndSubmit(location)
+      homeTests.confirm(homePage.load())
+      homePage.setPostcodeAndSubmit(location)
 
     /**
     * Create non-english page object
     */
-    var nonenglishPage = client.page.nonenglish()
+      var nonenglishPage = client.page.nonenglish()
 
     /**
     * Confirm correct Flood Zone Info
     */
-    nonenglishTests.assertnonenglish(nonenglishPage, item)
-  })
-  client.end()
-},
+      nonenglishTests.assertnonenglish(nonenglishPage, item)
+    })
+    client.end()
+  }
 }

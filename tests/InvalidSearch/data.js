@@ -20,5 +20,5 @@ emptyen: [
     { location: 'SY23 2HN' },
     { location: 'creggan' },
     { location: 'BT45' }
-]
+  ]
 }

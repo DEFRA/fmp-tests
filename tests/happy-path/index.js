@@ -24,20 +24,6 @@ module.exports = {
       */
       var confirmlocationPage = client.page.confirmlocation()
 
-      //Test confirm-location map fullscreen
-
-      client.pause(2000)  // added to counter timeout issues
-
-      confirmlocationPage.enterFullscreen()
-
-      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
-
-      confirmlocationTests.assertFullscreen(confirmlocationPage, true)
-
-      confirmlocationPage.exitFullscreen()
-
-      confirmlocationTests.assertFullscreen(confirmlocationPage, false)
-
       // Submit the search
       confirmlocationTests.url(confirmlocationPage, en)
       confirmlocationTests.confirm(confirmlocationPage)
@@ -48,23 +34,11 @@ module.exports = {
       */
       var summaryPage = client.page.summary()
 
-      //Test summary map fullscreen
-
-      summaryPage.enterfullscreen()
-
-      summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
-
-      summaryTests.assertfullscreen(summaryPage, true)
-
-      summaryPage.exitfullscreen()
-
-      summaryTests.assertfullscreen(summaryPage, false)
-
       /**
       * Confirm correct Flood Zone Info
       */
       summaryTests.confirm(summaryPage, item)
-})
+    })
     client.end()
 },
 'happy-path-place': function (client) {

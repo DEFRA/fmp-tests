@@ -72,12 +72,12 @@ module.exports = {
       summaryPage.assert.containsText('@areasbenefittingtext5', 'You can also read more about flood risk assessments for planning applications')
       summaryPage.assert.visible('@floodriskassessment2')
     }
-},
+  },
   assertfullscreen: function (summaryPage, val) {
-  if (val) {
-    summaryPage.assert.cssClassPresent('@main', 'fullscreen')
-  } else {
-    summaryPage.assert.cssClassNotPresent('@main', 'fullscreen')
+    if (val) {
+      summaryPage.assert.cssClassPresent('@main', 'fullscreen')
+    } else {
+      summaryPage.assert.cssClassNotPresent('@main', 'fullscreen')
+    }
   }
-}
 }
