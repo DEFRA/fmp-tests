@@ -1,11 +1,11 @@
 module.exports = {
   invalidpostcode: [
-    { location: '!"£$^&&*()"' },
+    { location: '"£$^&&*()"' },
     { location: 'sfrenfbtgd' }
 ],
   invalidngr: [
     { location: '!"£$^&&*()"' },
-    { location: 'SD 50420 70421' }
+    { location: 'Liverpool' }
 ],
   empty: [
     { location: '' }
