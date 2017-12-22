@@ -2,17 +2,17 @@ module.exports = {
   invalidpostcode: [
     { location: '"£$^&&*()"' },
     { location: 'sfrenfbtgd' }
-],
+  ],
   invalidngr: [
     { location: '!"£$^&&*()"' },
     { location: 'Liverpool' }
-],
+  ],
   empty: [
     { location: '' }
-],
-emptyen: [
+  ],
+  emptyen: [
   { validentry: '123456', emptyvalue: '' }
-],
+  ],
   nonenglish: [
     { location: 'EH1' },
     { location: 'Glasgow' },

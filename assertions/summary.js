@@ -8,7 +8,7 @@ module.exports = {
     summaryPage.assert.visible('@floodriskassessment')
 
     // ** Assert map elements are visible
-    summaryPage.waitForElementVisible('@mapcontainer', 2000)
+    summaryPage.waitForElementVisible('@zoomin', 2000)
     summaryPage.assert.visible('@mapcontainer')
     summaryPage.assert.visible('@zoomin')
     summaryPage.assert.visible('@zoomout')

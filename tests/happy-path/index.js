@@ -6,9 +6,9 @@ var summaryTests = require('../../assertions/summary')
 module.exports = {
   'happy-path-postcode': function (client) {
     // Loop over each postcode
-      data.postcode.forEach (function (item) {
+    data.postcode.forEach(function (item) {
       var location = item.location
-      var floodzone = item.floodzone
+      // var floodzone = item.floodzone
       var en = item.en
 
       var homePage = client.page.home()
@@ -40,194 +40,207 @@ module.exports = {
       summaryTests.confirm(summaryPage, item)
     })
     client.end()
-},
-'happy-path-place': function (client) {
+  },
+  'happy-path-place': function (client) {
   // Loop over each place
-    data.place.forEach (function (item) {
-    var location = item.location
-    var floodzone = item.floodzone
-    var en = item.en
+    data.place.forEach(function (item) {
+      var location = item.location
+      // var floodzone = item.floodzone
+      var en = item.en
 
-    var homePage = client.page.home()
+      var homePage = client.page.home()
 
     // Navigate to the home page & submit postcode
 
-    homeTests.confirm(homePage.load())
-    homePage.click('@postcoderadio')
-    homePage.setPostcodeAndSubmit(location)
+      homeTests.confirm(homePage.load())
+      homePage.click('@postcoderadio')
+      homePage.setPostcodeAndSubmit(location)
 
     /**
     * Create confirm-location page object
     */
-    var confirmlocationPage = client.page.confirmlocation()
+      var confirmlocationPage = client.page.confirmlocation()
 
-    //Test confirm-location map fullscreen
+    // Test confirm-location map fullscreen
 
-    client.pause(2000)  // added to counter timeout issues
+      client.pause(2000)  // added to counter timeout issues
 
-    confirmlocationPage.enterFullscreen()
+      confirmlocationPage.enterFullscreen()
 
-    confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
+      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, true)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, true)
 
-    confirmlocationPage.exitFullscreen()
+      confirmlocationPage.exitFullscreen()
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, false)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, false)
 
     // Submit the search
-    confirmlocationTests.url(confirmlocationPage, en)
-    confirmlocationTests.confirm(confirmlocationPage)
-    confirmlocationPage.submit()
+      confirmlocationTests.url(confirmlocationPage, en)
+      confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.submit()
 
     /**
     * Create summary page object
     */
-    var summaryPage = client.page.summary()
+      var summaryPage = client.page.summary()
 
-    //Test summary map fullscreen
+    // Test summary map fullscreen
 
-    summaryPage.enterfullscreen()
+      // need to pause for map layers to load before full screen functionality works
+      // ideally need a callback from map to confirm loading successful
+      client.pause(3000)
 
-    summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
+      summaryPage.enterfullscreen()
 
-    summaryTests.assertfullscreen(summaryPage, true)
+      summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
 
-    summaryPage.exitfullscreen()
+      summaryTests.assertfullscreen(summaryPage, true)
 
-    summaryTests.assertfullscreen(summaryPage, false)
+      summaryPage.exitfullscreen()
+
+      summaryTests.assertfullscreen(summaryPage, false)
 
     /**
     * Confirm correct Flood Zone Info
     */
-    summaryTests.confirm(summaryPage, item)
-})
-  client.end()
-},
-'happy-path-ngr': function (client) {
+      summaryTests.confirm(summaryPage, item)
+    })
+    client.end()
+  },
+  'happy-path-ngr': function (client) {
   // Loop over each place
-    data.ngr.forEach (function (item) {
-    var location = item.location
-    var floodzone = item.floodzone
-    var en = item.en
+    data.ngr.forEach(function (item) {
+      var location = item.location
+      // var floodzone = item.floodzone
+      var en = item.en
 
-    var homePage = client.page.home()
+      var homePage = client.page.home()
 
     // Navigate to the home page & submit postcode
 
-    homeTests.confirm(homePage.load())
-    homePage.click('@ngrradio')
-    homePage.setngrAndSubmit(location)
+      homeTests.confirm(homePage.load())
+      homePage.click('@ngrradio')
+      homePage.setngrAndSubmit(location)
 
     /**
     * Create confirm-location page object
     */
-    var confirmlocationPage = client.page.confirmlocation()
+      var confirmlocationPage = client.page.confirmlocation()
 
-    //Test confirm-location map fullscreen
+    // Test confirm-location map fullscreen
 
-    client.pause(2000)  // added to counter timeout issues
+      client.pause(2000)  // added to counter timeout issues
 
-    confirmlocationPage.enterFullscreen()
+      confirmlocationPage.enterFullscreen()
 
-    confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
+      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, true)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, true)
 
-    confirmlocationPage.exitFullscreen()
+      confirmlocationPage.exitFullscreen()
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, false)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, false)
 
     // Submit the search
-    confirmlocationTests.url(confirmlocationPage, en)
-    confirmlocationTests.confirm(confirmlocationPage)
-    confirmlocationPage.submit()
+      confirmlocationTests.url(confirmlocationPage, en)
+      confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.submit()
 
     /**
     * Create summary page object
     */
-    var summaryPage = client.page.summary()
+      var summaryPage = client.page.summary()
 
-    //Test summary map fullscreen
+    // Test summary map fullscreen
 
-    summaryPage.enterfullscreen()
+      // need to pause for map layers to load before full screen functionality works
+      // ideally need a callback from map to confirm loading successful
+      client.pause(3000)
 
-    summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
+      summaryPage.enterfullscreen()
 
-    summaryTests.assertfullscreen(summaryPage, true)
+      summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
 
-    summaryPage.exitfullscreen()
+      summaryTests.assertfullscreen(summaryPage, true)
 
-    summaryTests.assertfullscreen(summaryPage, false)
+      summaryPage.exitfullscreen()
+
+      summaryTests.assertfullscreen(summaryPage, false)
 
     /**
     * Confirm correct Flood Zone Info
     */
-    summaryTests.confirm(summaryPage, item)
-})
-  client.end()
-},
-'happy-path-en': function (client) {
+      summaryTests.confirm(summaryPage, item)
+    })
+    client.end()
+  },
+  'happy-path-en': function (client) {
   // Loop over each Easting and Northing
-    data.eandn.forEach (function (item) {
-    var easting = item.easting
-    var northing = item.northing
-    var floodzone = item.floodzone
-    var en = item.en
+    data.eandn.forEach(function (item) {
+      var easting = item.easting
+      var northing = item.northing
+      // var floodzone = item.floodzone
+      var en = item.en
 
-    var homePage = client.page.home()
+      var homePage = client.page.home()
 
     // Navigate to the home page & submit postcode
 
-    homeTests.confirm(homePage.load())
-    homePage.click('@enradio')
-    homePage.seteastingandnorthingAndSubmit(easting, northing)
+      homeTests.confirm(homePage.load())
+      homePage.click('@enradio')
+      homePage.seteastingandnorthingAndSubmit(easting, northing)
 
     /**
     * Create confirm-location page object
     */
-    var confirmlocationPage = client.page.confirmlocation()
+      var confirmlocationPage = client.page.confirmlocation()
 
-    //Test confirm-location map fullscreen
+    // Test confirm-location map fullscreen
 
-    client.pause(2000)  // added to counter timeout issues
+      client.pause(2000)  // added to counter timeout issues
 
-    confirmlocationPage.enterFullscreen()
+      confirmlocationPage.enterFullscreen()
 
-    confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
+      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, true)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, true)
 
-    confirmlocationPage.exitFullscreen()
+      confirmlocationPage.exitFullscreen()
 
-    confirmlocationTests.assertFullscreen(confirmlocationPage, false)
+      confirmlocationTests.assertFullscreen(confirmlocationPage, false)
 
     // Submit the search
-    confirmlocationTests.url(confirmlocationPage, en)
-    confirmlocationTests.confirm(confirmlocationPage)
-    confirmlocationPage.submit()
+      confirmlocationTests.url(confirmlocationPage, en)
+      confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.submit()
 
     /**
     * Create summary page object
     */
-    var summaryPage = client.page.summary()
+      var summaryPage = client.page.summary()
 
-    //Test summary map fullscreen
+    // Test summary map fullscreen
 
-    summaryPage.enterfullscreen()
+      // need to pause for map layers to load before full screen functionality works
+      // ideally need a callback from map to confirm loading successful
+      client.pause(3000)
 
-    summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
+      summaryPage.enterfullscreen()
 
-    summaryTests.assertfullscreen(summaryPage, true)
+      summaryPage.waitForElementVisible('#summary-page.fullscreen', 10000)  // added to counter timeout issues
 
-    summaryPage.exitfullscreen()
+      summaryTests.assertfullscreen(summaryPage, true)
 
-    summaryTests.assertfullscreen(summaryPage, false)
+      summaryPage.exitfullscreen()
+
+      summaryTests.assertfullscreen(summaryPage, false)
 
     /**
     * Confirm correct Flood Zone Info
     */
-    summaryTests.confirm(summaryPage, item)
-})
-  client.end()
-}}
+      summaryTests.confirm(summaryPage, item)
+    })
+    client.end()
+  }
+}

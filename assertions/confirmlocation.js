@@ -1,7 +1,7 @@
 module.exports = {
   confirm: function (confirmlocationPage) {
     confirmlocationPage
-      .waitForElementVisible('@map', 2000)
+      .waitForElementVisible('@mapzoomin', 2000)
       .assert.containsText('@header', 'Confirm the development location')
       .assert.containsText('@textblock1', 'Pinpoint your development accurately on the map to view the probability of it flooding.')
       .assert.containsText('@textblock2', 'Move the marker to the location of your development, then select \'Continue\'.')
