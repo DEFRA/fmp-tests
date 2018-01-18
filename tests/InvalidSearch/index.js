@@ -4,7 +4,7 @@ var nonenglishTests = require('../../assertions/nonenglish')
 
 module.exports = {
 
-// Search with invalid search term
+  // Search with invalid search term
 
   'InvalidPostcodeSearch': function (client) {
     // Loop over each postcode
@@ -24,16 +24,16 @@ module.exports = {
     client.end()
   },
 
-// Search with empty postcode search term
+  // Search with empty postcode search term
 
   'emptySearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.empty.forEach(function (item) {
       var location = item.location
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.click('@postcoderadio')
@@ -43,16 +43,16 @@ module.exports = {
     client.end()
   },
 
-// Search with invalid NGR
+  // Search with invalid NGR
 
   'InvalidNGRSearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.invalidngr.forEach(function (item) {
       var location = item.location
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.click('@ngrradio')
@@ -63,16 +63,16 @@ module.exports = {
     client.end()
   },
 
-// Search with empty ngr search term
+  // Search with empty ngr search term
 
   'emptyngrSearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.empty.forEach(function (item) {
       var location = item.location
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.click('@ngrradio')
@@ -82,17 +82,17 @@ module.exports = {
     client.end()
   },
 
-// Search with empty Easting
+  // Search with empty Easting
 
   'emptyeastingSearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.emptyen.forEach(function (item) {
       var validentry = item.validentry
       // var emptyvalue = item.emptyvalue
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.click('@enradio')
@@ -102,17 +102,17 @@ module.exports = {
     client.end()
   },
 
-// Search with empty Northing
+  // Search with empty Northing
 
   'emptynorthingSearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.emptyen.forEach(function (item) {
       var validentry = item.validentry
       // var emptyvalue = item.emptyvalue
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.click('@enradio')
@@ -122,29 +122,54 @@ module.exports = {
     client.end()
   },
 
-// Search with non-english search term
+  // Search with non-english search term
 
   'nonenglishSearch': function (client) {
-  // Loop over each postcode
+    // Loop over each postcode
     locations.nonenglish.forEach(function (item) {
       var location = item.location
 
       var homePage = client.page.home()
 
-    // Navigate to the home page & submit postcode
+      // Navigate to the home page & submit postcode
 
       homeTests.confirm(homePage.load())
       homePage.setPostcodeAndSubmit(location)
 
-    /**
-    * Create non-english page object
-    */
+      /**
+      * Create non-english page object
+      */
       var nonenglishPage = client.page.nonenglish()
 
-    /**
-    * Confirm correct Flood Zone Info
-    */
+      /**
+      * Confirm correct Flood Zone Info
+      */
       nonenglishTests.assertnonenglish(nonenglishPage, item)
+    })
+    client.end()
+  },
+
+  // Search with empty Northing
+
+  'invalid easting northing': function (client) {
+    // Loop over each postcode
+    locations.invaliden.forEach(function (item) {
+      var homePage = client.page.home()
+
+      // Navigate to the home page & submit postcode
+
+      homeTests.confirm(homePage.load())
+      homePage.click('@enradio')
+      homePage.seteasting(item.e)
+      homePage.setnorthing(item.n)
+      homePage.submit()
+      if (item.failon === 'e') {
+        homeTests.asserteastingError(homePage)
+      } else if (item.failon === 'n') {
+        homeTests.assertnorthingError(homePage)
+      } else {
+        homeTests.assertEastingAndNorthingError(homePage)
+      }
     })
     client.end()
   }

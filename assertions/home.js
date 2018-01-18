@@ -28,5 +28,9 @@ module.exports = {
   asserteastingError: function (page) {
     page.waitForElementVisible('@errorbox', 500)
     .assert.containsText('@errorbox', 'You need to give an easting')
+  },
+  assertEastingAndNorthingError: function (page) {
+    page.waitForElementVisible('@errorbox', 500)
+    .assert.containsText('@errorbox', 'You need to give an easting and northing')
   }
 }
