@@ -10,6 +10,12 @@ module.exports = {
       var location = item.location
       // var floodzone = item.floodzone
       var en = item.en
+      var firstpoint1 = item.firstpoint1
+      var firstpoint2 = item.firstpoint2
+      var secondpoint1 = item.secondpoint1
+      var secondpoint2 = item.secondpoint2
+      var thirdpoint1 = item.thirdpoint1
+      var thirdpoint2 = item.thirdpoint2
 
       var homePage = client.page.home()
 
@@ -27,6 +33,22 @@ module.exports = {
       // Submit the search
       confirmlocationTests.url(confirmlocationPage, en)
       confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.click('@howtodraw')
+      confirmlocationTests.instructions(confirmlocationPage)
+      confirmlocationPage.toggledraw()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', secondpoint1, secondpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', thirdpoint1, thirdpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      client.pause(1000)
       confirmlocationPage.submit()
 
       /**
@@ -47,6 +69,12 @@ module.exports = {
       var location = item.location
       // var floodzone = item.floodzone
       var en = item.en
+      var firstpoint1 = item.firstpoint1
+      var firstpoint2 = item.firstpoint2
+      var secondpoint1 = item.secondpoint1
+      var secondpoint2 = item.secondpoint2
+      var thirdpoint1 = item.thirdpoint1
+      var thirdpoint2 = item.thirdpoint2
 
       var homePage = client.page.home()
 
@@ -78,6 +106,22 @@ module.exports = {
     // Submit the search
       confirmlocationTests.url(confirmlocationPage, en)
       confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.click('@howtodraw')
+      confirmlocationTests.instructions(confirmlocationPage)
+      confirmlocationPage.toggledraw()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', secondpoint1, secondpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', thirdpoint1, thirdpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      client.pause(1000)
       confirmlocationPage.submit()
 
     /**
@@ -114,6 +158,12 @@ module.exports = {
       var location = item.location
       // var floodzone = item.floodzone
       var en = item.en
+      var firstpoint1 = item.firstpoint1
+      var firstpoint2 = item.firstpoint2
+      var secondpoint1 = item.secondpoint1
+      var secondpoint2 = item.secondpoint2
+      var thirdpoint1 = item.thirdpoint1
+      var thirdpoint2 = item.thirdpoint2
 
       var homePage = client.page.home()
 
@@ -145,6 +195,22 @@ module.exports = {
     // Submit the search
       confirmlocationTests.url(confirmlocationPage, en)
       confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.click('@howtodraw')
+      confirmlocationTests.instructions(confirmlocationPage)
+      confirmlocationPage.toggledraw()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', secondpoint1, secondpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', thirdpoint1, thirdpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      client.pause(1000)
       confirmlocationPage.submit()
 
     /**
@@ -182,6 +248,12 @@ module.exports = {
       var northing = item.northing
       // var floodzone = item.floodzone
       var en = item.en
+      var firstpoint1 = item.firstpoint1
+      var firstpoint2 = item.firstpoint2
+      var secondpoint1 = item.secondpoint1
+      var secondpoint2 = item.secondpoint2
+      var thirdpoint1 = item.thirdpoint1
+      var thirdpoint2 = item.thirdpoint2
 
       var homePage = client.page.home()
 
@@ -213,6 +285,22 @@ module.exports = {
     // Submit the search
       confirmlocationTests.url(confirmlocationPage, en)
       confirmlocationTests.confirm(confirmlocationPage)
+      confirmlocationPage.click('@howtodraw')
+      confirmlocationTests.instructions(confirmlocationPage)
+      confirmlocationPage.toggledraw()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', secondpoint1, secondpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', thirdpoint1, thirdpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      confirmlocationPage.moveToElement('.ol-attribution > button:nth-child(2)', firstpoint1, firstpoint2)
+      client.pause(1000)
+      client.mouseButtonClick()
+      client.pause(1000)
       confirmlocationPage.submit()
 
     /**

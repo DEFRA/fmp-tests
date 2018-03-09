@@ -4,27 +4,50 @@ module.exports = {
   },
   elements: {
     'main': '#confirm-location-page',
-    'header': 'h1',
-    'textblock1': '#confirm-location-page div.column-half.confirm-column p:nth-child(1)',
-    'textblock2': '#confirm-location-page div.column-half.confirm-column p:nth-child(2)',
-    'texticon': '#confirm-location-page div.column-half.confirm-column p img.marker-indicator',
-    'textblock3': '#confirm-location-page div.column-half.confirm-column p:nth-child(3)',
-    'submitBtn': '.button.button.button-get-started',
-    'map': '#confirm-location-page div.map-container',
-    'mapzoomin': '#map.map button.ol-zoom-in',
-    'mapzoomout': '#map.map button.ol-zoom-out',
-    'mapenterfullscreen': 'div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control.hidden-mobile button.ol-full-screen-false',
-    'mapexitfullscreen': 'div.exit-fullscreen.toggle-fullscreen.ol-full-screen.ol-control.hidden-mobile button.ol-full-screen-true',
-    'mapscale': '#map.map div.ol-scale-line.ol-unselectable',
-    'mapinfo': '#map.map div.ol-attribution.ol-unselectable.ol-control.ol-collapsed'
+    'header': '.heading-xlarge',
+    'textblock': '.info',
+    'howtodraw': 'div.nojs-hide:nth-child(6) > details:nth-child(2) > summary:nth-child(1) > span:nth-child(1)',
+    'howtodrawtextmain': '.list',
+    'howtodrawtext1': '.list > li:nth-child(1)',
+    'howtodrawtext2': '.list > li:nth-child(2)',
+    'howtodrawtext3': '.list > li:nth-child(3)',
+    'howtodrawtext4': '.list > li:nth-child(4)',
+    'howtodrawtext5': '.list > li:nth-child(5)',
+    'howtodrawtext6': '.list > li:nth-child(6)',
+    'howtodrawtext7': '.list > li:nth-child(7)',
+    'printpdfbtn': 'a.button',
+    'map': '#map',
+    'mapmovemarker': '.radio-button-group > label:nth-child(2)',
+    'mapdraw': '.radio-button-group > label:nth-child(4)',
+    'mapdelete': '.radio-button-group > label:nth-child(6)',
+    'mapenterfullscreen': '.ol-full-screen-false',
+    'mapexitfullscreen': '.ol-full-screen-true',
+    'mapzoomin': '.ol-zoom-in',
+    'mapzoomout': '.ol-zoom-out',
+    'mapscale': '.ol-scale-line-inner',
+    'mapcopyright': '.ol-attribution > button:nth-child(2)',
+    'maplegendpin': 'li.image:nth-child(1)',
+    'maplegendpolygon': 'li.polygon',
+    'maplegendfz3': 'li.rectangle:nth-child(3)',
+    'maplegendab': 'li.image:nth-child(4)',
+    'maplegendfz2': 'li.rectangle:nth-child(5)',
+    'maplegendfz1': 'li.rectangle:nth-child(6)',
+    'maplegendfd': 'li.line:nth-child(7)',
+    'maplegendmr': 'li.image:nth-child(8)',
+    'maplegendfsa': 'li.image:nth-child(9)',
+    'floodzonetoggle': '#layer-toggle2',
+    'floodzonetoggletext': 'div.form-section:nth-child(7) > div:nth-child(1) > label:nth-child(2)',
+    'viewsummary': '.continue',
+    'riskassessmentinfo': 'div.nojs-hide:nth-child(9) > p:nth-child(2)',
+    'riskassessmentlink': 'a[href="https://www.gov.uk/guidance/flood-risk-assessment-for-planning-applications#when-you-need-an-assessment"'
   },
   commands: [{
     load: function () {
       return this.navigate()
     },
     submit: function () {
-      return this.waitForElementVisible('@submitBtn', 2000)
-      .click('@submitBtn')
+      return this.waitForElementVisible('@viewsummary', 2000)
+      .click('@viewsummary')
     },
     enterFullscreen: function () {
       var that = this
@@ -37,6 +60,18 @@ module.exports = {
       this.waitForElementVisible('@mapexitfullscreen', 10000, function () {
         that.click('@mapexitfullscreen')
       })
+    },
+    printpdf: function () {
+      return this.waitForElementVisible('@printpdfbtn', 2000)
+      .click('@printpdfbtn')
+    },
+    togglelayers: function () {
+      return this.waitForElementVisible('@floodzonetoggle')
+      .click('@floodzonetoggle')
+    },
+    toggledraw: function () {
+      return this.waitForElementVisible('@mapdraw', 2000)
+      .click('@mapdraw')
     }
   }]
 }

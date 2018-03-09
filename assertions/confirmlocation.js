@@ -2,17 +2,33 @@ module.exports = {
   confirm: function (confirmlocationPage) {
     confirmlocationPage
       .waitForElementVisible('@mapzoomin', 2000)
-      .assert.containsText('@header', 'Confirm the development location')
-      .assert.containsText('@textblock1', 'Pinpoint your development accurately on the map to view the probability of it flooding.')
-      .assert.containsText('@textblock2', 'Move the marker to the location of your development, then select \'Continue\'.')
-      .assert.visible('@texticon')
-      .assert.containsText('@textblock3', 'If it\'s already in the right place, select \'Continue\'.')
+      .assert.containsText('@header', 'Likelihood of flooding in this area')
+      .assert.containsText('@textblock', 'You can move the marker on the map to identify a specific location.')
+      .assert.containsText('@textblock', 'Alternatively draw a shape to identify an approximate site boundary.')
+      .assert.visible('@howtodraw')
+      .assert.containsText('@howtodraw', 'How to draw a shape')
+      .assert.visible('@printpdfbtn')
       .assert.visible('@map')
-      .assert.visible('@mapzoomin')
-      .assert.visible('@mapzoomout')
-      .assert.visible('@mapenterfullscreen')
-      .assert.visible('@mapscale')
-      .assert.visible('@mapinfo')
+      .assert.visible('@mapmovemarker')
+      .assert.visible('@mapdraw')
+      .assert.visible('@mapdelete')
+      .assert.visible('@mapcopyright')
+      .assert.visible('@maplegendpin')
+      .assert.visible('@maplegendfz3')
+      .assert.visible('@maplegendab')
+      .assert.visible('@maplegendfz2')
+      .assert.visible('@maplegendfz1')
+      .assert.visible('@maplegendfd')
+      .assert.visible('@maplegendmr')
+      .assert.visible('@maplegendfsa')
+      .assert.attributeEquals('@floodzonetoggle', 'checked', 'true')
+      .assert.visible('@floodzonetoggletext')
+      .assert.containsText('@floodzonetoggletext', 'Show flood zones')
+      .assert.visible('@viewsummary')
+      .assert.containsText('@viewsummary', 'View flood zone summary map and more guidance')
+      .assert.visible('@riskassessmentinfo')
+      .assert.containsText('@riskassessmentinfo', 'You can use this information as part of a flood risk assessment for a planning application')
+      .assert.visible('@riskassessmentlink')
   },
   url: function (browser, en) {
     browser.assert.urlContains(en)
@@ -23,5 +39,23 @@ module.exports = {
     } else {
       confirmlocationPage.assert.cssClassNotPresent('@main', 'fullscreen')
     }
+  },
+  instructions: function (confirmlocationPage) {
+    confirmlocationPage
+      .waitForElementVisible('@howtodrawtextmain', 2000)
+      .assert.visible('@howtodrawtext1')
+      .assert.containsText('@howtodrawtext1', 'Select \'Draw shape\'')
+      .assert.visible('@howtodrawtext2')
+      .assert.containsText('@howtodrawtext2', 'Select any point on the site boundary')
+      .assert.visible('@howtodrawtext3')
+      .assert.containsText('@howtodrawtext3', 'Select a second point on the boundary. You should see a line drawn between the first two points')
+      .assert.visible('@howtodrawtext4')
+      .assert.containsText('@howtodrawtext4', 'Keep adding points until the boundary is defined')
+      .assert.visible('@howtodrawtext5')
+      .assert.containsText('@howtodrawtext5', 'Double click or tap when you return to your first point')
+      .assert.visible('@howtodrawtext6')
+      .assert.containsText('@howtodrawtext6', 'Edit the finished shape by dragging the points')
+      .assert.visible('@howtodrawtext7')
+      .assert.containsText('@howtodrawtext7', 'Add more points to a shape by clicking or tapping on a line')
   }
 }

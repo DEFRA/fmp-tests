@@ -17,6 +17,7 @@ module.exports = {
     'mapinfo': '#summary-page #map.map div.ol-attribution.ol-unselectable.ol-control.ol-collapsed button',
     'maplegend': '#summary-page #legend.controls',
     'maplegendpin': '#summary-page #legend.controls div.legend ul li.image.pin',
+    'maplegendpolygon': 'li.polygon',
     'maplegendfz3': '#summary-page #legend.controls div.legend ul li.rectangle.dark-blue',
     'maplegendfz2': '#summary-page #legend.controls div.legend ul li.rectangle.light-blue',
     'maplegendfz1': '#summary-page #legend.controls div.legend ul li.rectangle.black-border',
@@ -42,7 +43,7 @@ module.exports = {
     'zone1text8': '#summary-page div.grid-row div.column-half.summary-column div.zone1 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Zone 2 specific elements
-    'zone2titlesubtext': '#summary-page > div:nth-child(7) > p',
+    'zone2titlesubtext': 'div.nojs-hide:nth-child(6) > p:nth-child(1)',
     'zone2header': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone h2.heading-large',
     'zone2text1': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone p',
     'zone2moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.zone a',
@@ -52,7 +53,7 @@ module.exports = {
     'zone2text4': '#summary-page div.grid-row div.column-half.summary-column div.zone2 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Zone 3 specific elements
-    'zone3titlesubtext': '#summary-page > div:nth-child(7) > p',
+    'zone3titlesubtext': 'div.nojs-hide:nth-child(6) > p:nth-child(1)',
     'zone3header': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone h2.heading-large',
     'zone3text1': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone p',
     'zone3moreinfo': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.zone a',
@@ -62,7 +63,7 @@ module.exports = {
     'zone3text4': '#summary-page div.grid-row div.column-half.summary-column div.zone3 div.next ol.list.list-number li:nth-child(3) div.panel.panel-border-wide',
 
     // Areas benefitting specific elements
-    'areasbenefittingtitlesubtext': '#summary-page > div:nth-child(7) > p',
+    'areasbenefittingtitlesubtext': 'div.nojs-hide:nth-child(6) > p:nth-child(1)',
     'areasbenefittingheader1': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone h2.heading-large',
     'areasbenefittingheader2': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone h3.heading-medium',
     'areasbenefittingtext1': '#summary-page div.grid-row.main-container div.column-half.summary-column div.zone3-ben div.zone p',

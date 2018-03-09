@@ -2,7 +2,7 @@ module.exports = {
   confirm: function (summaryPage, data) {
     // **Assert generic page elements are visible
     summaryPage.assert.containsText('@title', 'Flood map for planning')
-    summaryPage.assert.containsText('@header', 'Flood probability')
+    summaryPage.assert.containsText('@header', 'Likelihood of flooding in this area')
     summaryPage.assert.visible('@moreinfo')
     summaryPage.assert.visible('@otherlocation')
     summaryPage.assert.visible('@floodriskassessment')
@@ -16,7 +16,6 @@ module.exports = {
     summaryPage.assert.visible('@scale')
     summaryPage.assert.visible('@mapinfo')
     summaryPage.assert.visible('@maplegend')
-    summaryPage.assert.visible('@maplegendpin')
     summaryPage.assert.visible('@maplegendfz3')
     summaryPage.assert.visible('@maplegendfz2')
     summaryPage.assert.visible('@maplegendfz1')
@@ -25,8 +24,15 @@ module.exports = {
     summaryPage.assert.visible('@maplegendmr')
     summaryPage.assert.visible('@maplegendfsa')
 
+    if (data.type === 'pin') {
+      summaryPage.assert.visible('@maplegendpin')
+    }
+    else {
+      summaryPage.assert.visible('@maplegendpolygon')
+    }
+
     if (data.floodzone === 'flood zone 1') {
-      summaryPage.assert.containsText('@zone1titlesubtext', 'Your proposed development is in an area with a low probability of flooding')
+      summaryPage.assert.containsText('@zone1titlesubtext', 'This location is in an area with a low probability of flooding')
       summaryPage.assert.containsText('@zone1header', 'FLOOD ZONE 1')
       summaryPage.assert.containsText('@zone1text1', 'Land and property in flood zone 1 have a low probability of flooding')
       summaryPage.assert.containsText('@zone1moreinfo', 'More information about flood zones')
@@ -40,7 +46,7 @@ module.exports = {
       summaryPage.assert.visible('@learnmorelink')
       summaryPage.assert.containsText('@zone1text8', 'You can also read more about flood risk assessments for planning applications')
     } else if (data.floodzone === 'flood zone 2') {
-      summaryPage.assert.containsText('@zone2titlesubtext', 'Your proposed development is in an area with a medium probability of flooding')
+      summaryPage.assert.containsText('@zone2titlesubtext', 'This location is in an area with a medium probability of flooding')
       summaryPage.assert.containsText('@zone2header', 'FLOOD ZONE 2')
       summaryPage.assert.containsText('@zone2text1', 'Land and property in flood zone 2 have a medium probability of flooding')
       summaryPage.assert.containsText('@zone2moreinfo', 'More information about flood zones')
@@ -49,7 +55,7 @@ module.exports = {
       summaryPage.assert.visible('@floodriskassessmentz2')
       summaryPage.assert.containsText('@zone2text4', 'You can also read more about flood risk assessments for planning applications')
     } else if (data.floodzone === 'flood zone 3') {
-      summaryPage.assert.containsText('@zone3titlesubtext', 'Your proposed development is in an area with a high probability of flooding')
+      summaryPage.assert.containsText('@zone3titlesubtext', 'This location is in an area with a high probability of flooding')
       summaryPage.assert.containsText('@zone3header', 'FLOOD ZONE 3')
       summaryPage.assert.containsText('@zone3text1', 'Land and property in flood zone 3 have a high probability of flooding')
       summaryPage.assert.containsText('@zone3moreinfo', 'More information about flood zones')
@@ -58,7 +64,7 @@ module.exports = {
       summaryPage.assert.visible('@floodriskassessmentz3')
       summaryPage.assert.containsText('@zone3text4', 'You can also read more about flood risk assessments for planning applications')
     } else if (data.floodzone === 'area that benefits from flood defences') {
-      summaryPage.assert.containsText('@areasbenefittingtitlesubtext', 'Your proposed development is in an area with a high probability of flooding')
+      summaryPage.assert.containsText('@areasbenefittingtitlesubtext', 'This location is in an area with a high probability of flooding')
       summaryPage.assert.containsText('@areasbenefittingheader1', 'FLOOD ZONE 3')
       summaryPage.assert.containsText('@areasbenefittingheader2', 'area that benefits from flood defences')
       summaryPage.assert.containsText('@areasbenefittingtext1', 'Land and property in this flood zone would have a high probability of flooding without the local flood defences. These protect the area against a river flood with a 1% chance of happening each year, or a flood from the sea with a 0.5% chance of happening each year.')
