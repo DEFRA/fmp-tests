@@ -95,7 +95,7 @@ module.exports = {
 
       confirmlocationPage.enterFullscreen()
 
-      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 10000)  // added to counter timeout issues
+      confirmlocationPage.waitForElementVisible('#confirm-location-page.fullscreen', 20000)  // added to counter timeout issues
 
       confirmlocationTests.assertFullscreen(confirmlocationPage, true)
 
