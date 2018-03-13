@@ -33,7 +33,9 @@ module.exports = {
   },
   test_settings: {
     'default': {
-      // filter: 'tests/happy-path/index.js',
+      skiptags: 'polygon',
+      // group: 'tests/happy-path',
+      // filter: 'tests/happy-path/happy-path-pin.js',
       launch_url: url,
       selenium_host: '127.0.0.1',
       selenium_port: 4444,
