@@ -3,6 +3,9 @@ module.exports = {
     homePage
       .assert.title('Flood map for planning - GOV.UK')
       .assert.containsText('@header', 'Flood map for planning')
+  },
+  assertcopy: function (homePage, browser) {
+    homePage
       .assert.containsText('@headersubtext1', 'Use this service to find out which flood zone a location is in, as part of land use planning')
       .assert.containsText('@headersubtext2', 'If you\'re planning a development you may need to undertake a more detailed flood risk assessment')
       .assert.containsText('@descheader', 'Before you start')
