@@ -39,7 +39,13 @@ module.exports = {
     'floodzonetoggletext': 'div.form-section:nth-child(7) > div:nth-child(1) > label:nth-child(2)',
     'viewsummary': '.continue',
     'riskassessmentinfo': 'div.nojs-hide:nth-child(9) > p:nth-child(2)',
-    'riskassessmentlink': 'a[href="https://www.gov.uk/guidance/flood-risk-assessment-for-planning-applications#when-you-need-an-assessment"'
+    'riskassessmentlink': 'a[href="https://www.gov.uk/guidance/flood-risk-assessment-for-planning-applications#when-you-need-an-assessment"',
+    'downloadheader': '#report > div:nth-child(1) > div:nth-child(1) > h1:nth-child(1)',
+    'downloadref': '#reference',
+    'downloadscale': '#scale',
+    'downloadpdf': 'button.button',
+    'downloadnotification': '#report-downloading',
+    'downloadnotificationtext': '#report-downloading > div:nth-child(1) > div:nth-child(1)'
   },
   commands: [{
     load: function () {

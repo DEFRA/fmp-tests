@@ -26,8 +26,7 @@ module.exports = {
 
     if (data.type === 'pin') {
       summaryPage.assert.visible('@maplegendpin')
-    }
-    else {
+    } else {
       summaryPage.assert.visible('@maplegendpolygon')
     }
 
@@ -85,5 +84,9 @@ module.exports = {
     } else {
       summaryPage.assert.cssClassNotPresent('@main', 'fullscreen')
     }
+  },
+  loadPagewithpolygon: function (summaryPage, polygon) {
+    summaryPage.loadPagewithpolygon(polygon)
+      .assert.title('Flood map for planning - GOV.UK')
   }
 }

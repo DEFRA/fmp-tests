@@ -1,3 +1,5 @@
+// var https = require('https')
+
 module.exports = {
   confirm: function (confirmlocationPage) {
     confirmlocationPage
@@ -61,5 +63,43 @@ module.exports = {
       .assert.containsText('@howtodrawtext6', 'Edit the finished shape by dragging the points')
       .assert.visible('@howtodrawtext7')
       .assert.containsText('@howtodrawtext7', 'Add more points to a shape by clicking or tapping on a line')
+  },
+  pdfpopup: function (confirmlocationPage, browser) {
+    confirmlocationPage
+    .assert.hidden('@downloadnotification')
+    .waitForElementVisible('@downloadheader', 2000)
+    .assert.containsText('@downloadheader', 'Download report')
+    .assert.visible('@downloadref')
+    .assert.visible('@downloadscale')
+    .assert.visible('@downloadpdf')
+    .click('@downloadpdf')
+    // .waitForElementVisible('@downloadnotificationtext', 3000)
+    // .assert.containsText('@downloadnotificationtext', 'Downloading report')
+    // .waitForElementVisible('@map', 3000)
+    // .assert.hidden('@downloadnotification')
   }
+  // CheckResponseCode: function (client) {
+  //   var http = require('https')
+
+  //   var options = {
+  //     'method': 'POST',
+  //     'hostname': 'fmp-dev.envage.co.uk',
+  //     'port': 443,
+  //     'path': '/pdf?id=1521545511459&zone=&polygon=&center=%5B362105%2C387218%5D&reference=PDFPrint1&scale=2500',
+  //     'headers': {
+  //       'content-type': 'application/x-www-form-urlencoded',
+  //       'referer': 'https://fmp-qa.envage.co.uk/confirm-location?easting=362105&northing=387218',
+  //       'accept-language': 'en-US,en;q=0.5',
+  //       'upgrade-insecure-requests': '1',
+  //       'accept-encoding': 'gzip, deflate, br',
+  //       'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  //       'user-agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0'
+  //     }
+  //   }
+  //   var req = http.request(options, function (response) {
+  //     client
+  //     .assert.equal(response.statusCode, 200, 'Check Status');
+  //     client.end()
+  // })
+  // }
 }

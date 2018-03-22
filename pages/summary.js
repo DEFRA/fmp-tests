@@ -92,6 +92,10 @@ module.exports = {
       this.waitForElementVisible('@exitfullscreen', 10000, function () {
         that.click('@exitfullscreen')
       })
+    },
+    loadPagewithpolygon: function (polygon) {
+      var url = this.api.launchUrl + polygon
+      return this.api.url(url)
     }
   }
   ]

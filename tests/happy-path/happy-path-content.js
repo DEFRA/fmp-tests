@@ -7,7 +7,6 @@ module.exports = {
     // Loop over each postcode
     data.copypostcode.forEach(function (item) {
       var location = item.location
-      // var floodzone = item.floodzone
       var en = item.en
       var homePage = client.page.home()
 
