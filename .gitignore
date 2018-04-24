@@ -5,3 +5,4 @@ logs
 npm-debug.log
 lcov.info
 *.log
+/config/nightwatch.conf.js

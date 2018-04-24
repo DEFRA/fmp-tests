@@ -27,7 +27,7 @@ module.exports = {
   polygonngr: [
     { location: 'SO572907', en: 'easting=357200&northing=290700', firstpoint1: 0, firstpoint2: -100, secondpoint1: -50, secondpoint2: -100, thirdpoint1: -50, thirdpoint2: -50, type: 'polygon', floodzone: 'flood zone 1' },
     { location: 'NT995283', en: 'easting=399500&northing=628300', firstpoint1: 0, firstpoint2: -300, secondpoint1: -50, secondpoint2: -450, thirdpoint1: -50, thirdpoint2: -350, type: 'polygon', floodzone: 'flood zone 2' },
-    { location: 'SD5042070421', en: 'easting=350420&northing=470421', firstpoint1: -250, firstpoint2: -100, secondpoint1: -350, secondpoint2: -250, thirdpoint1: -100, thirdpoint2: -180, type: 'polygon', floodzone: 'flood zone 3' },
+    { location: 'SU9034981372', en: 'easting=350420&northing=470421', firstpoint1: -250, firstpoint2: -100, secondpoint1: -350, secondpoint2: -250, thirdpoint1: -100, thirdpoint2: -180, type: 'polygon', floodzone: 'flood zone 3' },
     { location: 'SJ614874', en: 'easting=361400&northing=387400', firstpoint1: 0, firstpoint2: -100, secondpoint1: -50, secondpoint2: -100, thirdpoint1: -50, thirdpoint2: -50, type: 'polygon', floodzone: 'area that benefits from flood defences' }
   ],
   polygoneandn: [
@@ -68,5 +68,8 @@ module.exports = {
     { location: 'WA4 1HT' },
     { location: 'SE1 2HU' },
     { location: 'TS24 7QT' }
+  ],
+  updateddata: [
+    { location: 'Skelton Common', en: 'easting=478235.238&northing=429378.981', point1: 20, point2: -40, type: 'pin', floodzone: 'flood zone 2' }
   ]
 }
