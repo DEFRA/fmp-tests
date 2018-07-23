@@ -2,9 +2,11 @@ module.exports = {
   polygon: [
     // Straight forward polygons//
     { polygon: '/summary?polygon=[[339786,393147],[339684,393053],[339649,392874],[339805,392717],[340113,392741],[340230,392914],[340165,393060],[340043,393189],[339943,393240],[339807,393200],[339786,393147]]&center=[339940,392978]', type: 'polygon', floodzone: 'flood zone 1' },
+    { polygon: '/summary?polygon=[[340254,397530],[340691,397178],[341027,397441],[340652,397766],[340254,397530]]&center=[340641,397472]', type: 'polygon', floodzone: 'flood zone 1' },
     { polygon: '/summary?polygon=[[389529,346683],[389454,346896],[389391,346886],[389382,346851],[389417,346840],[389433,346783],[389393,346735],[389363,346679],[389451,346714],[389480,346735],[389529,346683]]&center=[389446,346788]', type: 'polygon', floodzone: 'flood zone 2' },
     { polygon: '/summary?polygon=[[364699,387491],[364665,387302],[364884,387257],[364917,387397],[364699,387491]]&center=[364791,387374]', type: 'polygon', floodzone: 'flood zone 3' },
     { polygon: '/summary?polygon=[[531638,180912],[531647,180821],[531705,180816],[531759,180825],[531810,180816],[531859,180816],[531897,180851],[531860,180933],[531813,180970],[531638,180912]]&center=[531768,180893]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
+    { polygon: '/summary?polygon=[[384638,432363],[384725,432200],[385052,432232],[384638,432363]]&center=[384845,432281]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
     // AB with FZ2 underneath//
     { polygon: '/summary?polygon=[[537155,177271],[537296,177271],[537282,176985],[537140,177006],[537155,177271]]&center=[537218,177128]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
     // FZ2, AB covering FZ2, AB covering FZ3 and FZ3//
