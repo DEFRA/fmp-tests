@@ -7,6 +7,7 @@ module.exports = {
     { polygon: '/summary?polygon=[[364699,387491],[364665,387302],[364884,387257],[364917,387397],[364699,387491]]&center=[364791,387374]', type: 'polygon', floodzone: 'flood zone 3' },
     { polygon: '/summary?polygon=[[531638,180912],[531647,180821],[531705,180816],[531759,180825],[531810,180816],[531859,180816],[531897,180851],[531860,180933],[531813,180970],[531638,180912]]&center=[531768,180893]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
     { polygon: '/summary?polygon=[[384638,432363],[384725,432200],[385052,432232],[384638,432363]]&center=[384845,432281]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
+    { polygon: '/summary?polygon=[[634081,156161],[633934,155538],[634333,154712],[634158,154376],[636979,154803],[635719,157008],[634081,156161]]&center=[635456,155692]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
     // AB with FZ2 underneath//
     { polygon: '/summary?polygon=[[537155,177271],[537296,177271],[537282,176985],[537140,177006],[537155,177271]]&center=[537218,177128]', type: 'polygon', floodzone: 'area that benefits from flood defences' },
     // FZ2, AB covering FZ2, AB covering FZ3 and FZ3//
@@ -45,9 +46,10 @@ module.exports = {
     { location: 'TS24 7QT', en: 'easting=450839&northing=531940', type: 'pin', floodzone: 'flood zone 3' }
   ],
   pinplace: [
-    { location: 'liverpool', en: 'easting=335051.51&northing=390727.82', type: 'pin', floodzone: 'flood zone 1' },
+    { location: 'liverpool', en: 'easting=335052&northing=390728', type: 'pin', floodzone: 'flood zone 1' },
     { location: 'latchford', en: 'easting=362119&northing=387177', type: 'pin', floodzone: 'flood zone 2' },
-    { location: 'potton island', en: 'easting=595652.699&northing=190615.792', type: 'pin', floodzone: 'area that benefits from flood defences' },
+    { location: 'potton island', en: 'easting=595653&northing=190616', type: 'pin', floodzone: 'area that benefits from flood defences' },
+    { location: 'Lydden Valley', en: 'easting=634868&northing=155255', type: 'pin', floodzone: 'area that benefits from flood defences' },
     { location: 'thames', en: 'easting=517791&northing=169556', type: 'pin', floodzone: 'flood zone 3' }
   ],
   pinngr: [
