@@ -13,10 +13,6 @@ module.exports = {
 // Given - user is on Privacy notice page
 // When - user follows the 'Personal Information Charter' link
 // Then - user is presented with the Personal Information Charter page
-
-// Given - user is on Personal Information Charter page
-// When - user wants to return to start page
-// Then - user can use the 'back' option to navigate back
    
       var homePage = client.page.home()
       var privacyNoticePage = client.page.privacyNotice
@@ -36,14 +32,6 @@ module.exports = {
       privacyNoticePage.clickPersonalInfoCharterLink()
       personalInfoCharterPageAssertions.confirm(personalInfoCharterPage.load())
       personalInfoCharterPageAssertions.assertPersonalInfoCharterContent()
-      // from the personal info charter page, click the back button
-      // expect to be back on the privacy notice page
-      // from privacy notice page, click back button
-      // expect to be on home page
-      personalInfoCharterPage.clickBack()
-      privacyNoticePageAssertions.confirm(privacyNoticePage.load())
-      privacyNoticePage.clickBack()
-      homePageAssertions.confirm(homePage.load())
 
     // close the browser
     client.end()

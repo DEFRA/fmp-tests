@@ -3,16 +3,15 @@ module.exports = {
     return this.api.launchUrl
   },
   elements: {
-    'secondaryerrortext': '#place-postcode > label > span.error-message',
-    'backBtn': 'need to add element'
+    'pageTitle': '#title',
+    'textBody': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds',
+    'bottomPageElement': '#contents > div:nth-child(2) > div > div > p:nth-child(39)'
+
+    
   },
   commands: [{
     load: function () {
       return this.navigate()
-    },
-    clickBack: function () {
-      return this.waitForElementVisible('@backBtn', 1000)
-      .click('@backBtn')
     }
   }]
 }
