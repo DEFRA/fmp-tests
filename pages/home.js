@@ -30,7 +30,8 @@ module.exports = {
     'homelink': 'a[href="https://flood-warning-information.service.gov.uk/"',
     'errorheader': '#error-summary-heading',
     'errortext': '#home-page > div:nth-child(1) > div > div > ul > li > a',
-    'secondaryerrortext': '#place-postcode > label > span.error-message'
+    'secondaryerrortext': '#place-postcode > label > span.error-message',
+    'privacyNoticeLink': '<a href="/privacy-notice">Privacy notice</a>'
   },
   commands: [{
     load: function () {
@@ -66,6 +67,10 @@ module.exports = {
     },
     setnorthingAndSubmit: function (validentry) {
       return this.setnorthing(validentry).submit()
+    },
+    clickPrivacyNoticeLink: function () {
+      return this.waitForElementVisible('@privacyNoticeLink', 1000)
+      .click('@privacyNoticeLink')
     }
   }]
 }
