@@ -31,7 +31,7 @@ module.exports = {
     'errorheader': '#error-summary-heading',
     'errortext': '#home-page > div:nth-child(1) > div > div > ul > li > a',
     'secondaryerrortext': '#place-postcode > label > span.error-message',
-    'privacyNoticeLink': '<a href="/privacy-notice">Privacy notice</a>'
+    'privacyNoticeLink': '#footer > div > div > div.footer-meta-inner > ul > li:nth-child(3) > a'
   },
   commands: [{
     load: function () {

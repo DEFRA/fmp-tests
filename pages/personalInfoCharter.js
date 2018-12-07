@@ -4,10 +4,8 @@ module.exports = {
   },
   elements: {
     'pageTitle': '#title',
-    'textBody': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds',
+    'textBody': '#contents > div:nth-child(2) > div > div > p:nth-child(2)',
     'bottomPageElement': '#contents > div:nth-child(2) > div > div > p:nth-child(39)'
-
-    
   },
   commands: [{
     load: function () {

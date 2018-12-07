@@ -3,9 +3,11 @@ module.exports = {
     return this.api.launchUrl
   },
   elements: {
-    'pageTitle': '#title',
-    'personalInfoCharterLink': 'need to add element',
-    'bottomPageElement': 'need to establish this element name'
+    'title': '#title',
+    'header': '#title',
+    'personalInfoCharterLink': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds > div > p:nth-child(3) > a',
+    'body': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds > div > p:nth-child(1)',
+    'footer': '#footer > div'
   },
   commands: [{
     load: function () {
