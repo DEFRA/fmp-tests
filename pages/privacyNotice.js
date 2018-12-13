@@ -6,7 +6,7 @@ module.exports = {
     'title': '#title',
     'header': '#title',
     'personalInfoCharterLink': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds > div > p:nth-child(3) > a',
-    'body': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds > div > p:nth-child(1)',
+    'body': '#content > main > div.grid-row.responsive-bottom-margin > div.column-two-thirds > div > p:nth-child(5)',
     'footer': '#footer > div'
   },
   commands: [{

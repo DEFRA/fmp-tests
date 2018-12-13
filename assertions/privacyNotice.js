@@ -6,6 +6,6 @@ module.exports = {
   },
   assertPrivacyNoticeContent: function (privacyNoticePage, browser) {
     privacyNoticePage
-    .assert.containsText('@body', 'These are the standards you can expect from the Environment Agency when we collect, hold or use your personal information when you use our service.')
+    .expect.element('@body').text.to.equal('When you use our GOV.UK service, we place small files called cookies onto your computer to collect information about how you use it. You can find out more about cookies and how to manage them.')
   }
 }
