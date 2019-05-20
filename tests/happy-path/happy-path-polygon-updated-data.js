@@ -4,7 +4,7 @@ var confirmlocationTests = require('../../assertions/confirmlocation')
 var summaryTests = require('../../assertions/summary')
 
 module.exports = {
-  '@tags': ['polygon-updated-data'],
+  '@tags': ['polygon-updated-data', 'polygon'],
   'happy-path-pin-updated-data': function (client) {
     // Loop over each place
     data.updateddata.forEach(function (item) {

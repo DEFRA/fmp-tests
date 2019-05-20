@@ -4,7 +4,7 @@ var confirmlocationTests = require('../../assertions/confirmlocation')
 var summaryTests = require('../../assertions/summary')
 
 module.exports = {
-  '@tags': ['polygon-en'],
+  '@tags': ['polygon-en', 'polygon'],
   'happy-path-polygon-en': function (client) {
   // Loop over each Easting and Northing
     data.polygoneandn.forEach(function (item) {

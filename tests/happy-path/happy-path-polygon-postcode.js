@@ -4,7 +4,7 @@ var confirmlocationTests = require('../../assertions/confirmlocation')
 var summaryTests = require('../../assertions/summary')
 
 module.exports = {
-  '@tags': ['polygon-postcode'],
+  '@tags': ['polygon-postcode', 'polygon'],
   'happy-path-polygon-postcode': function (client) {
     // Tests postcode search and polygon functionality
     // Loop over each postcode

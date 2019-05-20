@@ -4,7 +4,7 @@ var confirmlocationTests = require('../../assertions/confirmlocation')
 var summaryTests = require('../../assertions/summary')
 
 module.exports = {
-  '@tags': ['polygon-ngr'],
+  '@tags': ['polygon-ngr', 'polygon'],
   'happy-path-polygon-ngr': function (client) {
   // Loop over each place
     data.polygonngr.forEach(function (item) {
