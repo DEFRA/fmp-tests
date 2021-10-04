@@ -18,7 +18,6 @@ module.exports = {
     .assert.visible('@mapmovemarker')
     .assert.visible('@mapdraw')
     .assert.visible('@mapdelete')
-    .assert.visible('@mapcopyright')
     .assert.visible('@maplegendpin')
     .assert.visible('@maplegendfz3')
     .assert.visible('@maplegendab')

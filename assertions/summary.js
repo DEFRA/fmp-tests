@@ -13,8 +13,6 @@ module.exports = {
     summaryPage.assert.visible('@zoomin')
     summaryPage.assert.visible('@zoomout')
     summaryPage.assert.visible('@enterfullscreen')
-    summaryPage.assert.visible('@scale')
-    summaryPage.assert.visible('@mapinfo')
     summaryPage.assert.visible('@maplegend')
     summaryPage.assert.visible('@maplegendfz3')
     summaryPage.assert.visible('@maplegendfz2')

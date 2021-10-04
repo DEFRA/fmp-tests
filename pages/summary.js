@@ -14,7 +14,6 @@ module.exports = {
     'enterfullscreen': '#summary-page div.enter-fullscreen.toggle-fullscreen.ol-full-screen.ol-control button.ol-full-screen-false',
     'exitfullscreen': '#summary-page.fullscreen div.exit-fullscreen.toggle-fullscreen.ol-full-screen.ol-control.hidden-mobile button.ol-full-screen-true',
     'scale': '#summary-page #map.map div.ol-scale-line.ol-unselectable',
-    'mapinfo': '#summary-page #map.map div.ol-attribution.ol-unselectable.ol-control.ol-collapsed button',
     'maplegend': '#summary-page #legend.controls',
     'maplegendpin': '#summary-page #legend.controls div.legend ul li.image.pin',
     'maplegendpolygon': 'li.polygon',

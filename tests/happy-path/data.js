@@ -18,7 +18,7 @@ module.exports = {
   polygonpostcode: [
     { location: 'L12 8QW', en: 'easting=340055&northing=392774', firstpoint1: 0, firstpoint2: -100, secondpoint1: -50, secondpoint2: -200, thirdpoint1: -50, thirdpoint2: -100, type: 'polygon', floodzone: 'flood zone 1' },
     { location: 'WA4 1HT', en: 'easting=362105&northing=387218', firstpoint1: 0, firstpoint2: -100, secondpoint1: -50, secondpoint2: -200, thirdpoint1: -50, thirdpoint2: -100, type: 'polygon', floodzone: 'flood zone 2' },
-    { location: 'TS24 7QT', en: 'easting=450839&northing=531940', firstpoint1: 0, firstpoint2: -250, secondpoint1: -50, secondpoint2: -250, thirdpoint1: -50, thirdpoint2: -150, type: 'polygon', floodzone: 'flood zone 3' },
+    { location: 'TS24 7QT', en: 'easting=450836&northing=531988', firstpoint1: 0, firstpoint2: -250, secondpoint1: -50, secondpoint2: -250, thirdpoint1: -50, thirdpoint2: -150, type: 'polygon', floodzone: 'flood zone 3' },
     { location: 'SE1 2HU', en: 'easting=533200&northing=180275', firstpoint1: 0, firstpoint2: -100, secondpoint1: -50, secondpoint2: -100, thirdpoint1: -50, thirdpoint2: -50, type: 'polygon', floodzone: 'area that benefits from flood defences' }
   ],
   polygonplace: [
@@ -41,13 +41,13 @@ module.exports = {
   ],
   pinpostcode: [
     { location: 'L12 8QW', en: 'easting=340055&northing=392774', type: 'pin', floodzone: 'flood zone 1' },
-    { location: 'WA4 1HT', en: 'easting=362105&northing=387218', type: 'pin', floodzone: 'flood zone 2' },
+    { location: 'WA4 6RU', en: 'easting=361269&northing=386805', type: 'pin', floodzone: 'flood zone 2' },
     { location: 'SE1 2HU', en: 'easting=533200&northing=180275', type: 'pin', floodzone: 'area that benefits from flood defences' },
-    { location: 'TS24 7QT', en: 'easting=450839&northing=531940', type: 'pin', floodzone: 'flood zone 3' }
+    { location: 'TS24 7QR', en: 'easting=450659&northing=531834', type: 'pin', floodzone: 'flood zone 3' }
   ],
   pinplace: [
     { location: 'liverpool', en: 'easting=335052&northing=390728', type: 'pin', floodzone: 'flood zone 1' },
-    { location: 'latchford', en: 'easting=362119&northing=387177', type: 'pin', floodzone: 'flood zone 2' },
+    { location: 'wilderspool', en: 'easting=361209&northing=386846', type: 'pin', floodzone: 'flood zone 2' },
     { location: 'potton island', en: 'easting=595653&northing=190616', type: 'pin', floodzone: 'area that benefits from flood defences' },
     { location: 'Lydden Valley', en: 'easting=634868&northing=155255', type: 'pin', floodzone: 'area that benefits from flood defences' },
     { location: 'thames', en: 'easting=517791&northing=169556', type: 'pin', floodzone: 'flood zone 3' }
